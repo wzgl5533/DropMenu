@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--文本和箭头图标的间距-->
+    <dimen name="txt_to_img_distance">@dimen/x15</dimen>
+    <dimen name="img_icon_width">@dimen/x24</dimen>
+    <dimen name="img_icon_height">@dimen/x15</dimen>
+    <dimen name="txt_size">@dimen/x43</dimen>
+    <dimen name="drop_menu_item_height">@dimen/y144</dimen>
+</resources>

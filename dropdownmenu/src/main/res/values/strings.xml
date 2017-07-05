@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DropDownMenu</string>
+    <string name="no_data">没有找到符合条件的房源</string>
+</resources>
