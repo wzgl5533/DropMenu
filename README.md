@@ -14,6 +14,7 @@
 
 ## 使用
 1. 添加依赖
+
 Add it in your project build.gradle at the end of repositories:
 ```
 	allprojects {
