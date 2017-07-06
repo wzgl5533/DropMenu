@@ -20,7 +20,6 @@
         app:ddtextSelectedColor="@color/blue_light"
         app:ddtextUnselectedColor="@color/drop_down_unselected"
         app:ddunderlineColor="@color/divider"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp"/>
+        app:ddpopMenuHeightPercent="0.6"/>
 
 </LinearLayout>

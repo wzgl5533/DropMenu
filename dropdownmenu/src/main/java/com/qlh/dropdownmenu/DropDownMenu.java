@@ -20,6 +20,7 @@ import java.util.List;
 
 /**
  * Created by qlh on 2017/7/5.
+ * 根布局DropDownMenu主要包括：tabMenuView，underLine，containerView（包含popupMenuViews，maskView）
  */
 public class DropDownMenu extends LinearLayout {
 
@@ -50,6 +51,10 @@ public class DropDownMenu extends LinearLayout {
     private int menuSelectedIcon;
     //tab未选中图标
     private int menuUnselectedIcon;
+    //menu tab高度,暂时不用
+    private float tabMenuHeightPercent = ViewGroup.LayoutParams.WRAP_CONTENT;
+    //menu弹框最大高度，按照屏幕比例计算
+    private float popMenuHeightPercent = 0.5f;
 
 
     public DropDownMenu(Context context) {
@@ -64,24 +69,35 @@ public class DropDownMenu extends LinearLayout {
         super(context, attrs, defStyleAttr);
 
         this.context = context;
+        //设置根布局为垂直方向
         setOrientation(VERTICAL);
 
         //为DropDownMenu添加自定义属性
-        int menuBackgroundColor = 0xffffffff;
-        int underlineColor = 0xffcccccc;
+        int menuBackgroundColor = 0xffffffff;//菜单导航背景颜色
+        int underlineColor = 0xffcccccc;//下划线颜色
+        //自定义属性
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DropDownMenu);
-        underlineColor = a.getColor(R.styleable.DropDownMenu_ddunderlineColor, underlineColor);
-        dividerColor = a.getColor(R.styleable.DropDownMenu_dddividerColor, dividerColor);
+        underlineColor = a.getColor(R.styleable.DropDownMenu_ddunderlineColor, underlineColor);//下划线颜色
+        dividerColor = a.getColor(R.styleable.DropDownMenu_dddividerColor, dividerColor);//分割线颜色
+        //文本选中颜色
         textSelectedColor = a.getColor(R.styleable.DropDownMenu_ddtextSelectedColor, textSelectedColor);
+        //文本未选中颜色
         textUnselectedColor = a.getColor(R.styleable.DropDownMenu_ddtextUnselectedColor, textUnselectedColor);
+        //菜单导航背景颜色
         menuBackgroundColor = a.getColor(R.styleable.DropDownMenu_ddmenuBackgroundColor, menuBackgroundColor);
+        //遮罩层颜色
         maskColor = a.getColor(R.styleable.DropDownMenu_ddmaskColor, maskColor);
+        //菜单导航文本字体大小
         menuTextSize = a.getDimensionPixelSize(R.styleable.DropDownMenu_ddmenuTextSize, menuTextSize);
+        //菜单导航item选中时箭头图标
         menuSelectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuSelectedIcon, menuSelectedIcon);
+        //菜单导航item未选中时箭头图标
         menuUnselectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuUnselectedIcon, menuUnselectedIcon);
+        ////菜单导航高度
+        popMenuHeightPercent = a.getFloat(R.styleable.DropDownMenu_ddpopMenuHeightPercent, popMenuHeightPercent);
         a.recycle();
 
-        //初始化tabMenuView并添加到tabMenuView
+        //初始化tabMenuView并添加到主布局DropDownMenu
         tabMenuView = new LinearLayout(context);
         LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         tabMenuView.setOrientation(HORIZONTAL);
@@ -89,7 +105,7 @@ public class DropDownMenu extends LinearLayout {
         tabMenuView.setLayoutParams(params);
         addView(tabMenuView, 0);
 
-        //为tabMenuView添加下划线
+        //为主布局DropDownMenu添加下划线
         View underLine = new View(getContext());
         underLine.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dpTpPx
                 (0.5f)));
@@ -133,6 +149,8 @@ public class DropDownMenu extends LinearLayout {
         maskView.setVisibility(GONE);
 
         popupMenuViews = new FrameLayout(getContext());
+        popupMenuViews.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams
+                .MATCH_PARENT,(int)(DeviceUtils.getScreenSize(getContext()).y * popMenuHeightPercent)));
         popupMenuViews.setVisibility(GONE);
         containerView.addView(popupMenuViews, 2);
 
