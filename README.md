@@ -13,26 +13,8 @@
 ![dropmenu.gif](http://note.youdao.com/yws/public/resource/7ef1d889de68ddafc07874e25cadfd57/xmlnote/8C9AEFB246474938BA5DA99FEFA087A0/10690)
 
 ## 使用
-1. 添加依赖
 
-Add it in your project build.gradle at the end of repositories:
-
-```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-```
-
-Add it in your module build.gradle
-
-```
-	dependencies {
-	        compile 'com.github.wzgl5533:DropMenu:1.0'
-	}
-```
+[具体的依赖参考GitHub上的README](https://github.com/wzgl5533)
 
 2. 添加DropDownMenu 到你的布局文件，如下：
 
