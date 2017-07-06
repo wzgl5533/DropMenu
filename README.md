@@ -139,6 +139,6 @@ public class MainActivity extends AppCompatActivity {
 
 ## 关于我的点滴
 
-简书[简书](http://www.jianshu.com/p/0a313554364b)
+简书：[小胖归来](http://www.jianshu.com/p/0a313554364b)
 
-CSDN[CSDN](http://blog.csdn.net/wzgl708937822)
+CSDN：[奔跑的小虎](http://blog.csdn.net/wzgl708937822)
