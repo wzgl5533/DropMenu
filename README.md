@@ -133,3 +133,9 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+如果你要了解更多，可以直接看源码或者关注原作者的项目，喝水不忘挖井人
+> 可以直接添加依赖库到工程中（As），ES的只能复制了
+
+## 关于我的点滴
+简书[简书](http://www.jianshu.com/p/0a313554364b)
+CSDN[CSDN](http://blog.csdn.net/wzgl708937822)
