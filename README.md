@@ -14,7 +14,7 @@
 
 ## 使用
 
-[具体的依赖参考GitHub上的README](https://github.com/wzgl5533)
+具体参考： [具体的依赖参考GitHub上的README](https://github.com/wzgl5533)
 
 2. 添加DropDownMenu 到你的布局文件，如下：
 
