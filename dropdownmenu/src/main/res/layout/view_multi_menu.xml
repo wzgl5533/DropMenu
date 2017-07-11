@@ -22,7 +22,8 @@
             android:layout_height="match_parent"
             android:cacheColorHint="@color/no_color"
             android:layout_weight="2"
-            android:divider="@null"
+            android:dividerHeight="1px"
+            android:divider="#dcdcdc"
             android:background="@color/choose_area_item_press_color" >
         </ListView>
 

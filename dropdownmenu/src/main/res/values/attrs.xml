@@ -11,6 +11,7 @@
         <attr name="ddmenuTextSize" format="dimension"/>
         <attr name="ddmenuSelectedIcon" format="reference"/>
         <attr name="ddmenuUnselectedIcon" format="reference"/>
+        <attr name="ddIsUsePopMenuHeightPercent" format="boolean"/>
         <attr name="ddpopMenuHeightPercent" format="float"/>
     </declare-styleable>
 </resources>

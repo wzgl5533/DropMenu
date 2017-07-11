@@ -13,4 +13,5 @@
     <color name="choose_area_item_press_color">#f4f4f4</color>
     <color name="no_color">#00000000</color>
     <color name="txt_color">#000000</color>
+    <color name="blue_light">#0084ff</color>
 </resources>

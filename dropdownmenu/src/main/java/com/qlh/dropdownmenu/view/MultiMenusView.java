@@ -83,7 +83,7 @@ public class MultiMenusView extends LinearLayout implements ViewBaseAction {
      */
     public void setMenuContent() {
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < levelOneMenu.length; i++) {
             levelOneMenusList.add(levelOneMenu[i]);
             LinkedList<String> tItem = new LinkedList<String>();
             for (int j = 0; j < levelTwoMenu[i].length; j++) {

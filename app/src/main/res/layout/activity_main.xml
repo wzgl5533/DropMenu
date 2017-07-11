@@ -20,6 +20,7 @@
         app:ddtextSelectedColor="@color/blue_light"
         app:ddtextUnselectedColor="@color/drop_down_unselected"
         app:ddunderlineColor="@color/divider"
+        app:ddIsUsePopMenuHeightPercent="true"
         app:ddpopMenuHeightPercent="0.6"/>
 
 </LinearLayout>

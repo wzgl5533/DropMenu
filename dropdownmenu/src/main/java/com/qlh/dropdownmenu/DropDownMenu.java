@@ -53,6 +53,8 @@ public class DropDownMenu extends LinearLayout {
     private int menuUnselectedIcon;
     //menu tab高度,暂时不用
     private float tabMenuHeightPercent = ViewGroup.LayoutParams.WRAP_CONTENT;
+    //是否使用高度百分比
+    private boolean isUsePopMenuHeightPercent = false;
     //menu弹框最大高度，按照屏幕比例计算
     private float popMenuHeightPercent = 0.5f;
 
@@ -93,7 +95,10 @@ public class DropDownMenu extends LinearLayout {
         menuSelectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuSelectedIcon, menuSelectedIcon);
         //菜单导航item未选中时箭头图标
         menuUnselectedIcon = a.getResourceId(R.styleable.DropDownMenu_ddmenuUnselectedIcon, menuUnselectedIcon);
-        ////菜单导航高度
+        //是否使用高度百分比
+        isUsePopMenuHeightPercent = a.getBoolean(R.styleable
+                .DropDownMenu_ddIsUsePopMenuHeightPercent,isUsePopMenuHeightPercent);
+        //菜单导航高度
         popMenuHeightPercent = a.getFloat(R.styleable.DropDownMenu_ddpopMenuHeightPercent, popMenuHeightPercent);
         a.recycle();
 
@@ -149,8 +154,11 @@ public class DropDownMenu extends LinearLayout {
         maskView.setVisibility(GONE);
 
         popupMenuViews = new FrameLayout(getContext());
+
+        if (isUsePopMenuHeightPercent)
         popupMenuViews.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams
                 .MATCH_PARENT,(int)(DeviceUtils.getScreenSize(getContext()).y * popMenuHeightPercent)));
+
         popupMenuViews.setVisibility(GONE);
         containerView.addView(popupMenuViews, 2);
 

@@ -49,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
         headers = new String[]{"木材类别", "产地"};
         //初始化多级菜单
-        final String[] levelOneMenu = {"全部", "原木", "板材", "方料"};
+        final String[] levelOneMenu = {"全部", "原木", "板材", "方料","灌木"};
         final String[][] levelTwoMenu = {
                 {"辐射松", "铁杉", "樟子松", "云杉", "红橡", "白橡", "樟木", "桦木", "沙比利", "奥坎", "榉木", "落叶松"},
                 {"辐射松", "铁杉", "樟子松", "云杉"},
                 {"红橡", "白橡", "樟木", "桦木"},
-                {"沙比利", "奥坎", "榉木", "落叶松"}
+                {"沙比利", "奥坎", "榉木", "落叶松"},
+                {"针叶", "观杨", "梧桐", "香樟树"}
         };
         multiMenusView = new MultiMenusView(instance,levelOneMenu,levelTwoMenu);
         popupViews.add(multiMenusView);
