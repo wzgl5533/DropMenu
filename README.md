@@ -1,3 +1,5 @@
+## 最新修改（可以直接DropMenu:+   [随时获取最新的版本]）
+1.0.1版本：修改MultiMenusView中levelOneMenuList固定数目的错误；增加控制是否使用高度百分比的属性isUsePopMenuHeightPercent；给二级菜单添加分割线
 ## 简介
 这是一个改写过的多级下拉菜单（给自己项目使用的），可以根据自己的需求进行添加各种菜单样式，在很多App上都能看到这个效果，如美团，爱奇艺电影票等，单级菜单，
 多级菜单和其他自定义的菜单。本项目参考下面的开源库，搭了基本的框架，可以自己根据要求添加菜单视图。
@@ -27,7 +29,7 @@ Add it in your project build.gradle at the end of repositories:
 Add it in your module build.gradle
 ```
 	dependencies {
-	        compile 'com.github.wzgl5533:DropMenu:1.0'
+	        compile 'com.github.wzgl5533:DropMenu:1.0.1'
 	}
 ```
 2. 添加DropDownMenu 到你的布局文件，如下：
